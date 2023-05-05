@@ -1,66 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>Sistem Informasi Rental Buku</h1>
+<p>Ini adalah aplikasi Sistem Informasi Rental Buku berbasis web yang dibangun dengan menggunakan framework Laravel versi 9. Aplikasi ini memudahkan pengelolaan buku pada rental buku.</p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2>Fitur</h2>
+<p>Aplikasi Sistem Informasi Rental Buku memiliki fitur sebagai berikut:</p> 
+  <ol>
+    <li>Autentikasi Pengguna.</li>
+    <li>Manajemen Buku: Aplikasi ini memungkinkan pengelolaan data buku.</li>
+    <li>Melihat Data Buku.</li>
+    <li>Mencari Buku.</li>
+    <li>Melakukan transaksi peminjaman dan pengembalian buku.</li>
+    <li>Melihat riwayat transaksi.</li>
+  </ol>
 
-## About Laravel
+<h2>Teknologi yang Digunakan</h2>
+<p>Aplikasi ini dikembangkan menggunakan teknologi sebagai berikut:</p>
+<ol>
+  <li>Backend: Aplikasi ini menggunakan PHP sebagai bahasa pemrograman backend dengan framework Laravel. Database yang digunakan adalah MySQL.</li>
+  <li>Frontend: Aplikasi ini menggunakan Blade sebagai bahasa pemrograman frontend. UI/UX framework yang digunakan adalah Bootstrap.</li>
+  <li>Authentication: Aplikasi ini menggunakan Laravel Authentication untuk melakukan otentikasi pengguna.</li>
+</ol>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h2>Instalasi</h2>
+<p>Berikut adalah langkah-langkah untuk menginstal Aplikasi Sistem Informasi Rental Buku:</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<ol>
+  <li>Clone repository ini <a href="https://github.com/aldistate/book-rent.git">https://github.com/aldistate/book-rent.git</a> atau download repository ini dan extract ke dalam folder yang diinginkan.</li>
+  <li>Jalankan perintah 'composer install' pada terminal di folder aplikasi.</li>
+  <li>Salin file .env.example menjadi .env , jalankan perintah 'cp .env.example .env' pada terminal</li>
+  <li>Buat key baru untuk aplikasi, jalankan perintah 'php artisan key:generate' pada terminal</li>
+  <li>Buatlah sebuah database baru di MySQL dengan nama 'book_rent'.</li>
+  <li>Buka file .env dan ubah konfigurasi database sesuai dengan database yang sudah dibuat.</li>
+  <li>Jalankan migrasi database, dengan perintah 'php artisan migrate'</li>
+  <li>Jalankan server development, dengan perintah 'php artisan serve'</li>
+  <li>Buka web browser dan akses http://localhost:8000 untuk membuka aplikasi.</li>
+</ol>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<br>
+<p>Demikianlah README.md untuk Aplikasi Sistem Informasi Rental Buku menggunakan Laravel versi 9 dan MySQL, serta bagaimana membuat API dan mengintegrasikannya dengan UI Bootstrap. Jangan ragu untuk mengembangkan aplikasi ini lebih jauh, menambahkan fitur baru, atau memperbaiki kode yang ada untuk meningkatkan performa dan fungsionalitasnya. Terima kasih telah membaca, semoga bermanfaat!</p>
