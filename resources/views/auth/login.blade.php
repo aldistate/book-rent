@@ -3,9 +3,13 @@
 
 @section('container')
 
-  <div class="main d-flex justify-content-center align-items-center" style="height: 100vh; box-sizing: border-box;">
-    <div class="p-4 col-5">
-      <form action="" method="post">
+  <div class="d-flex justify-content-center align-items-center" style="height: 100vh; box-sizing: border-box;">
+    <div class="p-4 col-5 border">
+      @if (Session::get('failed'))
+        <div class="alert alert-danger">{{ Session::get('failed') }}</div>
+      @endif
+      
+      <form action="{{ route('auth') }}" method="post">
         @csrf
 
         {{-- input username --}}
