@@ -15,13 +15,13 @@
         {{-- input username --}}
         <div>
           <label for="username" class="col-form-label">Username</label>
-          <input type="text" name="username" id="username" class="form-control">
+          <input type="text" name="username" id="username" class="form-control" required>
         </div>
 
         {{-- input password --}}
         <div class="mt-2">
           <label for="password" class="col-form-label">Password</label>
-          <input type="password" name="password" id="password" class="form-control">
+          <input type="password" name="password" id="password" class="form-control" required>
         </div>
 
         {{-- submit data --}}

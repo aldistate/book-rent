@@ -27,6 +27,8 @@ class AuthController extends Controller
                 return redirect('/login')->with('failed', 'Your account is not active yet, please contact admin!');
             }
 
+            $request->session()->regenerate();
+
             // cek apakah rolenya admin
             if (Auth::user()->role_id == 1) {
                 return redirect('dashboard');
@@ -37,5 +39,13 @@ class AuthController extends Controller
         }
 
         return redirect('/login')->with('failed', 'Username or Password Invalid!');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect(route('login'));
     }
 }
