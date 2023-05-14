@@ -5,10 +5,15 @@
 
   <div class="d-flex justify-content-center align-items-center" style="height: 100vh; box-sizing: border-box;">
     <div class="p-4 col-5 border">
+      <h1 class="mb-4 text-center">Login</h1>
+
+      {{-- jika gagal, tampilkan pesan gagalnya --}}
       @if (Session::get('failed'))
         <div class="alert alert-danger">{{ Session::get('failed') }}</div>
       @endif
+      {{-- end gagal --}}
       
+      {{-- ini form --}}
       <form action="{{ route('auth') }}" method="post">
         @csrf
 
@@ -31,9 +36,11 @@
 
         {{-- register --}}
         <div class="mt-4 text-center">
-          <a href="#">Sign Up</a>
+          Don't have an account yet? <a href="{{ route('indexRegister') }}">Sign Up</a>
         </div>
       </form>
+      {{-- ini akhir dari form --}}
+
     </div>
   </div>
 
