@@ -10,6 +10,10 @@
 </head>
 <body>
   
+  {{-- navbar --}}
+  @include('partials.navbar')
+
+  {{-- main content --}}
   <div class="container">
     @yield('container')
   </div>
