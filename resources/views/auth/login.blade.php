@@ -3,7 +3,7 @@
 
 @section('container')
 
-  <div class="d-flex justify-content-center align-items-center" style="height: 100vh; box-sizing: border-box;">
+  <div class="d-flex justify-content-center align-items-center" style="box-sizing: border-box;">
     <div class="p-4 col-5 border">
       <h1 class="mb-4 text-center">Login</h1>
 
