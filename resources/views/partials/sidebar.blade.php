@@ -1,18 +1,60 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="/dashboard">
-          <span data-feather="home" class="align-text-bottom"></span>
-          Dashboard
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/dashboard/posts">
-          <span data-feather="shopping-bag" class="align-text-bottom"></span>
-          My Posts
-        </a>
-      </li>
+      @if (Auth::user()->role_id == 1)
+      {{-- admin --}}
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+            <span data-feather="table" class="align-text-bottom"></span>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+            <span data-feather="users" class="align-text-bottom"></span>
+            Users
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="book-open" class="align-text-bottom"></span>
+            Books
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="server" class="align-text-bottom"></span>
+            Categories
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="file-text" class="align-text-bottom"></span>
+            Rent Log
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="log-out" class="align-text-bottom"></span>
+            Log Out
+          </a>
+        </li>
+        @else
+        {{-- client --}}
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="circle" class="align-text-bottom"></span>
+              Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="log-out" class="align-text-bottom"></span>
+              Log Out
+            </a>
+          </li>
+      @endif
+
     </ul>
     
     {{-- hanya bisa dilihat oleh admin --}}
