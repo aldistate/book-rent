@@ -14,22 +14,10 @@
   <title>@yield('title')</title>
 </head>
 <body>
-  
-  {{-- navbar --}}
-  @include('partials.navbar')
 
   {{-- main content --}}
-  <div class="container-fluid">
-    <div class="row g-0">
-      <div class="col-2 border">
-        {{-- sidebar --}}
-        @include('partials.sidebar')
-        {{-- content --}}
-      </div>
-      <main class="p-3 col-10">
-        @yield('container')
-      </main>
-    </div>
+  <div class="container d-flex justify-content-center align-items-center" style="box-sizing: border-box; height: 100vh;">
+    @yield('container')
   </div>
 
   {{-- Bootstrap JS --}}

@@ -2,5 +2,8 @@
 @section('title', 'Rental Buku | Profile')
 
 @section('container')
-  <h1>ini halaman profile</h1>
+  <div class="border">
+    <h1>ini halaman profile</h1>
+
+  </div>
 @endsection
