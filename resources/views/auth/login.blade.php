@@ -1,9 +1,8 @@
-@extends('layout.main')
+@extends('auth.main')
 @section('title', 'Rental Buku | Login')
 
 @section('container')
 
-  <div class="d-flex justify-content-center align-items-center" style="box-sizing: border-box;">
     <div class="p-4 col-5 border">
       <h1 class="mb-4 text-center">Login</h1>
 
@@ -42,6 +41,5 @@
       {{-- ini akhir dari form --}}
 
     </div>
-  </div>
-
+    
 @endsection
