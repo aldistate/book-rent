@@ -1,7 +1,7 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
-      {{-- @if (Auth::user()->role_id == 1) --}}
+      @if (Auth::user()->role_id == 1)
       {{-- admin --}}
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">
@@ -39,7 +39,7 @@
             Log Out
           </a>
         </li>
-        {{-- @else --}}
+        @else
         {{-- client --}}
           <li class="nav-item">
             <a class="nav-link" href="#">
@@ -53,7 +53,7 @@
               Log Out
             </a>
           </li>
-      {{-- @endif --}}
+      @endif
 
     </ul>
     

@@ -21,7 +21,7 @@
   {{-- main content --}}
   <div class="container-fluid">
     <div class="row g-0">
-      <div class="col-2 border">
+      <div class="col-2">
         {{-- sidebar --}}
         @include('partials.sidebar')
         {{-- content --}}
