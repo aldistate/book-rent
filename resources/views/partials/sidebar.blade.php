@@ -1,59 +1,59 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
-      {{-- @if (Auth::user()->role_id == 1) --}}
+      @if (Auth::user()->role_id == 1)
       {{-- admin --}}
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="{{ route('indexDashboard') }}">
             <span data-feather="table" class="align-text-bottom"></span>
             Dashboard
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="{{ route('usersIndex') }}">
             <span data-feather="users" class="align-text-bottom"></span>
             Users
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" aria-current="page" href="{{ route('bookIndex') }}">
             <span data-feather="book-open" class="align-text-bottom"></span>
             Books
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" aria-current="page" href="{{ route('categoryIndex') }}">
             <span data-feather="server" class="align-text-bottom"></span>
             Categories
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" aria-current="page" href="{{ route('rentlog') }}">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Rent Log
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" aria-current="page" href="#">
             <span data-feather="log-out" class="align-text-bottom"></span>
             Log Out
           </a>
         </li>
-        {{-- @else --}}
+        @else
         {{-- client --}}
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" aria-current="page" href="#">
               <span data-feather="circle" class="align-text-bottom"></span>
               Profile
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" aria-current="page" href="#">
               <span data-feather="log-out" class="align-text-bottom"></span>
               Log Out
             </a>
           </li>
-      {{-- @endif --}}
+      @endif
 
     </ul>
     

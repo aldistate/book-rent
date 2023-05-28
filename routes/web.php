@@ -29,9 +29,14 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::controller(DashboardController::class)->group(function () {
+        Route::get('/dashboard', 'index')->middleware('isAdmin')->name('indexDashboard');
+        Route::get('/users', 'usersIndex')->middleware('isAdmin')->name('usersIndex');
+        Route::get('/category', 'categoryIndex')->middleware('isAdmin')->name('categoryIndex');
+        Route::get('/rentlog', 'rentlog')->middleware('isAdmin')->name('rentlog');
+    });
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('isAdmin')->name('indexDashboard');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     
     Route::get('/profile', [UserController::class, 'profile'])->middleware('isClient')->name('profile');
 });
